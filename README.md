@@ -11,8 +11,10 @@ Liblend を利用する前に、以下のことを行ってください。
 Google Apps Script でデータベースを作成します<br>
 
 [Google Drive](https://drive.google.com/)を開き、[liblend/database/admin/orgCodeSheet/LibrendAdmin_orgcodesheet.xlsx](https://github.com/latorcmd/liblend/blob/main/database/admin/orgCodeSheet/LibrendAdmin_orgcodesheet.xlsx)をアップロードします。<br>
-アップロードしたファイルを開き、拡張機能＞ Apps Script を押します。<br>
-コード.gs に[liblend/database/admin/orgCodeSheet/Code.gs](https://github.com/latorcmd/liblend/blob/main/database/admin/orgCodeSheet/Code.gs)のコードをコピーアンドペーストし、保存します。<br>
+アップロードしたファイルを開き、URL の'/d/'と'/edit'の間の文字の羅列（スプレッドシート ID）をコピーします。
+拡張機能＞ Apps Script を押します。<br>
+コード.gs に[liblend/database/admin/orgCodeSheet/Code.gs](https://github.com/latorcmd/liblend/blob/main/database/admin/orgCodeSheet/Code.gs)のコードをコピーアンドペーストします。<br>
+4 行目の"Enter Spreadsheet ID"にコピーしたスプレッドシート ID をペーストします。<br>
 デプロイ＞新しいデプロイを押し、表示された画面で歯車マーク＞ウェブアプリを押して、「次のユーザーとして実行」を「自分」、「アクセスできるユーザー」を「全員」にしてデプロイを押します。<br>
 自分のアカウントにログインし、プログラムに権限を与えます。<br>
 その後、表示された「デプロイ URL」をコピーし、[liblend/liblend_app/login/script.js](https://github.com/latorcmd/liblend/blob/main/liblend_app/login/script.js):41 の"Login Database URL"にペーストします。<br>

@@ -38,9 +38,7 @@ function preload() {
 function challangeOrgAccess() {
   orgCode = inputOrgCode();
   sessionStorage.setItem("orgCode", orgCode);
-  orgAccessURL =
-    "https://script.google.com/macros/s/AKfycbyr69I6KwJTgwi_ioMhyluzqtZeV19eRvkyQpB2Yzgu0jUvh1Hbk10jHld7Rw236l65/exec?requestType=login&orgCode=" /*デフォルトのログインデータベース https~exec まで変更してください*/ +
-    orgCode;
+  orgAccessURL = "Login Database URL" + "?requestType=login&orgCode=" + orgCode;
   // サーバーと通信する
   sendOrgRequest(onRequest_org);
 }
@@ -134,8 +132,7 @@ function onRequest_setting(list) {
   sessionStorage.setItem("googleAPIKey", googleAPIKey);
   if (defaultAPIEngine == "google") {
     if (googleAPIKey == undefined) {
-      googleAPIKey =
-        "AIzaSyDd8uG2oo2ZLFx-z-mI1YBrOHCMEHM-R5o"; /*デフォルトのGoogle API Key 変更してください*/
+      googleAPIKey = "Google API Key";
       sessionStorage.setItem("googleAPIKey", googleAPIKey);
     }
   }

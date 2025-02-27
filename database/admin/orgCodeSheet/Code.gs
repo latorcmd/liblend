@@ -1,7 +1,7 @@
 // グローバル変数宣言
 let orgCode;
 let sheetID;
-var bookID = "1GosGubNyPqTo2dRJaTOFdaDAy0iH_l590NcHSmYtsKY";
+var bookID = "Enter Spreadsheet ID";
 var book = SpreadsheetApp.openById(bookID);
 
 // データを送るファンクション.

@@ -3,7 +3,7 @@ main {
   margin-bottom: 10px;
 }
 
-main h2{
+main h2 {
   font-size: 30px;
   border-left-style: solid;
   border-left-width: 10px;
@@ -13,7 +13,6 @@ main h2{
   margin-left: 30px;
   color: var(--text-color-body);
 }
-
 
 .input table {
   margin-left: auto;
@@ -60,7 +59,6 @@ button {
 label {
   margin-left: 30px;
 }
-
 
 .hidden {
   display: none;

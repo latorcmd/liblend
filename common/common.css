@@ -50,19 +50,19 @@ header {
 }
 
 header .nav .header-menu {
-    display: flex; 
+  display: flex;
 }
 
 header .nav .header-menu li {
-    list-style: none; 
-    margin-left: 40px;
-    color: var(--text-color-onfill);
+  list-style: none;
+  margin-left: 40px;
+  color: var(--text-color-onfill);
 }
 
-header .nav .header-menu li a{
-   color: var(--text-color-link);
-   font-weight:bold;
-   text-decoration: none;
+header .nav .header-menu li a {
+  color: var(--text-color-link);
+  font-weight: bold;
+  text-decoration: none;
 }
 
 header h1 {
@@ -72,7 +72,6 @@ header h1 {
 header p {
   color: var(--text-color-onfill);
 }
-
 
 a:link {
   color: var(--text-color-link);
@@ -85,8 +84,6 @@ a:visited {
 a:focus {
   color: var(--text-color-link-active);
 }
-
-
 
 /* ボタン */
 button {
@@ -105,7 +102,6 @@ button:hover {
   background: var(--tertiary-color);
   cursor: pointer;
 }
-
 
 p {
   margin-left: 30px;
@@ -130,7 +126,7 @@ main h2 {
   display: none;
 }
 
-.noborder{
+.noborder {
   margin: auto;
 }
 
@@ -144,10 +140,8 @@ main h2 {
   color: var(--text-color-discription);
 }
 
-
-
 /* ここから下がハンバーガーメニューに関するCSS */
-  
+
 /* チェックボックスを非表示にする */
 .drawer_hidden {
   display: none;
@@ -160,7 +154,7 @@ main h2 {
   align-items: center;
   position: absolute;
   right: 20px;
-  z-index: 100;/* 重なり順を一番上にする */
+  z-index: 100; /* 重なり順を一番上にする */
   cursor: pointer;
 }
 
@@ -168,7 +162,7 @@ main h2 {
 .drawer_open span,
 .drawer_open span:before,
 .drawer_open span:after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   width: 25px;
@@ -203,7 +197,7 @@ main h2 {
   top: 0;
   transform: rotate(-45deg);
 }
-  
+
 /* メニューのデザイン*/
 .nav_content {
   width: 100%;
@@ -213,7 +207,7 @@ main h2 {
   left: 100%; /* メニューを画面の外に飛ばす */
   z-index: 99;
   background: var(--primary-color);
-  transition: .5s;
+  transition: 0.5s;
   text-align: center;
   padding-top: 20px;
 }

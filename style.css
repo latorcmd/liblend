@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-main h2{
+main h2 {
   font-size: 30px;
   border-left-style: solid;
   border-left-width: 10px;
@@ -57,7 +57,7 @@ h3 {
 }
 .aphoto span {
   display: block;
-  margin-right: calc((50vw  - 100%) * -1);
+  margin-right: calc((50vw - 100%) * -1);
 }
 
 .aphoto img {
@@ -85,7 +85,6 @@ h3 {
   margin: auto;
   display: block;
 }
-
 
 iframe {
   margin: auto;

@@ -1,79 +1,108 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 
 <html>
-    
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>ヘルプ|統一図書貸出管理システム「Liblend」</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/common/common.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/common/img/apple-touch-icon-180x180.png" sizes="180x180">
-    <link rel="icon" type="image/png" href="/common/img/android-chrome-192x192.png" sizes="192x192">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/common/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="/common/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/common/img/apple-touch-icon-180x180.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/common/img/android-chrome-192x192.png"
+      sizes="192x192"
+    />
+  </head>
 
-<body onload="preload()">
+  <body onload="preload()">
     <header>
-        <h1 onclick="location.href='/'">Liblend</h1>
-        <nav class="nav">
-            <ul class="header-menu">
-                <li><p>ヘルプ</p></li>
-            </ul>
-        </nav>
-        <nav class="nav">
-            <ul class="header-menu">
-                <li><button onclick="window.open('/liblend_app/info/')">&#x26a0;稼働状況</button></li>
-                <li><button onclick="window.open('https://sites.google.com/view/liblend-lcmdservice/')">&#x26a0;稼働状況</button></li>
-            </ul>
-        </nav>
+      <h1 onclick="location.href='/'">Liblend</h1>
+      <nav class="nav">
+        <ul class="header-menu">
+          <li><p>ヘルプ</p></li>
+        </ul>
+      </nav>
+      <nav class="nav">
+        <ul class="header-menu">
+          <li>
+            <button onclick="window.open('/liblend_app/info/')">
+              &#x26a0;稼働状況
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="window.open('https://sites.google.com/view/liblend-lcmdservice/')"
+            >
+              &#x26a0;稼働状況
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
-    
+
     <main>
-        <div>
-            <h2>目次</h2>
-            <p><a href='#login'>ログイン画面</a></p>
-            <p><a href='#user_home'>ホーム</a></p>
-            <p><a href='#user_lendingList'>借りている本</a></p>
-            <p><a href='#description'>本の詳細</a></p>
-            <p><a href='#librarian_proxyLogin'>司書代理ログイン(貸出・返却処理)</a></p>
-            <p><a href='#admin_proxyLogin'>管理者代理ログイン(権限管理)</a></p>
-            <p><a href='#admin_resetPassword'>パスワードをリセット</a></p>
-        </div>
-        <div id='login'>
-            <h2>ログイン画面</h2>
-            <img src="img/login.png"/>
-        </div>
-        <div id='user_home'>
-            <h2>ホーム</h2>
-            <img src="img/user_home.png"/>
-        </div>
-        <div id='user_lendingList'>
-            <h2>借りている本</h2>
-            <img src="img/user_lendingList.png"/>
-        </div>
-        <div id='description'>
-            <h2>本の詳細</h2>
-            <img src="img/book_description.png"/>
-        </div>
-        <div id='librarian_proxyLogin'>
-            <h2>司書代理ログイン(貸出・返却処理)</h2>
-            <img src="img/librarian_proxylogin.png"/>
-        </div>
-        <div id='admin_proxyLogin'>
-            <h2>管理者代理ログイン(権限管理)</h2>
-            <img src="img/admin_proxylogin.png"/>
-        </div>
-        <div id='admin_resetPassword'>
-            <h2>パスワードをリセット</h2>
-            <img src="img/admin_resetPassword.png"/>
-        </div>
+      <div>
+        <h2>目次</h2>
+        <p><a href="#login">ログイン画面</a></p>
+        <p><a href="#user_home">ホーム</a></p>
+        <p><a href="#user_lendingList">借りている本</a></p>
+        <p><a href="#description">本の詳細</a></p>
+        <p>
+          <a href="#librarian_proxyLogin">司書代理ログイン(貸出・返却処理)</a>
+        </p>
+        <p><a href="#admin_proxyLogin">管理者代理ログイン(権限管理)</a></p>
+        <p><a href="#admin_resetPassword">パスワードをリセット</a></p>
+      </div>
+      <div id="login">
+        <h2>ログイン画面</h2>
+        <img src="img/login.png" />
+      </div>
+      <div id="user_home">
+        <h2>ホーム</h2>
+        <img src="img/user_home.png" />
+      </div>
+      <div id="user_lendingList">
+        <h2>借りている本</h2>
+        <img src="img/user_lendingList.png" />
+      </div>
+      <div id="description">
+        <h2>本の詳細</h2>
+        <img src="img/book_description.png" />
+      </div>
+      <div id="librarian_proxyLogin">
+        <h2>司書代理ログイン(貸出・返却処理)</h2>
+        <img src="img/librarian_proxylogin.png" />
+      </div>
+      <div id="admin_proxyLogin">
+        <h2>管理者代理ログイン(権限管理)</h2>
+        <img src="img/admin_proxylogin.png" />
+      </div>
+      <div id="admin_resetPassword">
+        <h2>パスワードをリセット</h2>
+        <img src="img/admin_resetPassword.png" />
+      </div>
     </main>
-   
+
     <footer>&copy; 2024 Liblend/LCMD All Rights Reserved.</footer>
-</body>
- 
-  
+  </body>
 </html>

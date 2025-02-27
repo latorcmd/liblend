@@ -51,25 +51,24 @@ header {
 }
 
 header .nav .header-menu {
-    display: flex; 
+  display: flex;
 }
 
 header .nav .header-menu li {
-    list-style: none; 
-    margin-left: 40px;
-    color: var(--text-color-onfill);
+  list-style: none;
+  margin-left: 40px;
+  color: var(--text-color-onfill);
 }
 
-header .nav .header-menu li a{
-   color: var(--link-default-color);
-   font-weight:bold;
-   text-decoration: none;
+header .nav .header-menu li a {
+  color: var(--link-default-color);
+  font-weight: bold;
+  text-decoration: none;
 }
 
 header h1 {
   color: var(--text-color-onfill);
 }
-
 
 a:link {
   color: var(--link-default-color);
@@ -107,7 +106,6 @@ footer {
   padding-bottom: 10px;
 }
 
-
 table {
   background-color: var(--background-color);
   border-collapse: collapse;
@@ -144,12 +142,12 @@ th {
 
 .title h2 {
   font-size: 30px;
-  color: var(--text-color-body)
+  color: var(--text-color-body);
 }
 
 .title h3 {
   font-size: 25px;
-  color: var(--text-color-body)
+  color: var(--text-color-body);
 }
 
 .title h4 {
@@ -164,7 +162,7 @@ img {
   display: block;
   margin: auto;
   margin-bottom: 50px;
-  width: 30%
+  width: 30%;
 }
 
 #description {

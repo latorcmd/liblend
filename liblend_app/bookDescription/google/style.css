@@ -1,0 +1,174 @@
+/* ===== 変数の定義 ===== */
+/* 色 */
+:root {
+  --primary-color: #138ea5;
+  --secondary-color: #17a4bd;
+  --tertiary-color: #096172;
+  --background-color: #e9f7f9;
+  --success-color-1: #2c9d65;
+  --success-color-2: #1f7a4d;
+  --error-color-1: #ea0016;
+  --error-color-2: #cc0012;
+  --warning-color-1: #b68e1e;
+  --warning-color-2: #917216;
+  --text-color-body: #1a1a1c;
+  --text-color-discription: #626264;
+  --text-color-placeholder: #757578;
+  --text-color-onfill: #ffffff;
+  --text-color-link: #0017c1;
+  --text-color-link-active: #000082;
+  --text-color-alert: #ec0000;
+  --text-color-disabled: #949497;
+}
+
+/* ===== Webサイト全体のスタイル ===== */
+/* html */
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Sans JP";
+  height: 100%;
+  margin: 0;
+  background-color: var(--background-color);
+  padding-top: 60px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: var(--primary-color);
+  padding: 20px 60px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .nav .header-menu {
+    display: flex; 
+}
+
+header .nav .header-menu li {
+    list-style: none; 
+    margin-left: 40px;
+    color: var(--text-color-onfill);
+}
+
+header .nav .header-menu li a{
+   color: var(--link-default-color);
+   font-weight:bold;
+   text-decoration: none;
+}
+
+header h1 {
+  color: var(--text-color-onfill);
+}
+
+
+a:link {
+  color: var(--link-default-color);
+}
+
+a:visited {
+  color: var(--link-visited-color);
+}
+
+a:focus {
+  color: var(--link-focus-color);
+}
+
+/* ボタン */
+button {
+  background: var(--secondary-color);
+  color: var(--text-color-onfill);
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* ボタンにさわったとき */
+button:hover {
+  background: var(--tertiary-color);
+  cursor: pointer;
+}
+
+/* footerセクション */
+footer {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--text-color-onfill);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+table {
+  background-color: var(--background-color);
+  border-collapse: collapse;
+  width: 70%;
+  margin: auto;
+}
+
+td {
+  border: 1px solid #000000;
+  padding: 10px;
+  color: var(--text-color-discription);
+}
+
+th {
+  width: 130px;
+  border: 1px solid #000000;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  text-align: left;
+  color: var(--text-color-onfill);
+}
+
+.title {
+  border-left-style: solid;
+  border-left-width: 10px;
+  padding-left: 15px;
+  margin-bottom: 50px;
+  border-left-color: var(--secondary-color);
+  margin-left: 30px;
+  overflow: hidden;
+  width: 75%;
+  background: var(--background-color);
+}
+
+.title h2 {
+  font-size: 30px;
+  color: var(--text-color-body)
+}
+
+.title h3 {
+  font-size: 25px;
+  color: var(--text-color-body)
+}
+
+.title h4 {
+  font-size: 20px;
+  color: var(--text-color-discription);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+img {
+  display: block;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 30%
+}
+
+#description {
+  display: block;
+  margin: auto;
+  width: 70%;
+  margin-bottom: 15px;
+}

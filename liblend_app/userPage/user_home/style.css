@@ -1,0 +1,43 @@
+/* ---------------mainセクション-------------- */
+main {
+  margin-bottom: 10px;
+}
+
+.main h2{
+  font-size: 30px;
+  border-left-style: solid;
+  border-left-width: 10px;
+  padding-left: 15px;
+  margin-bottom: 50px;
+  border-left-color: var(--secondary-color);
+  margin-left: 30px;
+  color: var(--text-color-body);
+}
+
+.main table {
+  background-color: var(--background-color);
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+}
+
+.main table th {
+  width: 30%;
+  border: 1px solid #000000;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  text-align: left;
+  color: var(--text-color-onfill);
+}
+
+.main table td {
+  border: 1px solid #000000;
+  padding: 10px;
+  color: var(--text-color-discription);
+}
+
+
+.barcode {
+  display: block;
+  padding-left: 25px;
+}

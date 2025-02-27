@@ -1,0 +1,93 @@
+.header h2 {
+  color: var(--tertiary-color);
+  font-size: 30px;
+}
+
+.header h1 {
+  color: var(--primary-color);
+  font-size: 90px;
+  font-family: "Noto Sans Mono";
+  text-align: center;
+  height: 150px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-repeat: no-repeat;
+  border-style: solid;
+  border-color: var(--background-color);
+  border-width: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 24px;
+  background: var(--background-color);
+  box-shadow: 30px 45px 60px -30px #000000;
+}
+
+.header {
+  background-image: url(top_img/banner.png);
+  height: 450px;
+  padding-top: 150px;
+  text-align: center;
+}
+
+main h2{
+  font-size: 30px;
+  border-left-style: solid;
+  border-left-width: 10px;
+  padding-left: 15px;
+  margin-bottom: 50px;
+  border-left-color: var(--secondary-color);
+  margin-left: 30px;
+  color: var(--text-color-body);
+}
+
+.abox {
+  display: flex;
+}
+
+h3 {
+  margin-left: 30px;
+}
+
+.atxt {
+  flex: 1;
+  margin-right: 30px;
+}
+.aphoto {
+  width: 50%;
+}
+.aphoto span {
+  display: block;
+  margin-right: calc((50vw  - 100%) * -1);
+}
+
+.aphoto img {
+  width: 100%;
+}
+
+.kakusimesse-zi {
+  font-size: 1px;
+  color: var(--background-color);
+}
+
+.kiyakubox {
+  height: 100px;
+  border: 1px solid;
+  overflow-y: scroll;
+  width: 80%;
+  margin: auto;
+}
+
+.checkboxk {
+  margin: auto;
+}
+
+.checkboxk input {
+  margin: auto;
+  display: block;
+}
+
+
+iframe {
+  margin: auto;
+  display: block;
+}

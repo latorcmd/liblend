@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+
+<html>
+    
+<head>
+    <meta charset="utf-8" />
+    <title>ログイン|統一図書貸出管理システム「Liblend」</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/common/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/common/img/apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/common/img/android-chrome-192x192.png" sizes="192x192">
+</head>
+
+<body onload="preload()">
+    <header>
+        <h1 onclick="location.href='/'">Liblend</h1>
+        <nav class="nav">
+            <ul class="header-menu">
+                <li><button onclick="window.open('/liblend_app/info/')">&#x2139;ヘルプ</button></li>
+                <li><button onclick="location.href='/liblend_app/login/'">&#x1f464;ログイン</a></li>
+                <li><button onclick="window.open('https://sites.google.com/view/liblend-lcmdservice/')">&#x26a0;稼働状況</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+   <main>
+    <section class="login">
+        <h2>システムへログイン</h2>
+        <div class="loginbox">
+            <table>
+                <tr>
+                <th>組織番号(OrgCode)</th>
+                <td>
+                    <input type="number" class="orgCode-login" name="OrgCode" placeholder="半角数字5ケタで入力" id="orgCode">
+                </td>
+                </tr>
+            </table>
+            <button onclick="challangeOrgAccess()">組織へ接続</button>
+        </div>
+        <!-- 出力欄 -->
+        <div class="outputBox">
+          <!-- 表 -->
+          <table>
+            <tr>
+              <th>接続状況</th>
+              <td class="showText1">接続を試行していません</td>
+            </tr>
+            <tr>
+              <th>組織名</th>
+              <td class="showText2">?</td>
+            </tr>
+          </table>
+        </div>
+        <div class="loginbox">
+            <table>
+                <tr>
+                <th>利用者番号(UserCode)</th>
+                <td>
+                    <input type="number" class="userCode-login" name="UserCode" placeholder="半角数字9ケタで入力" id="userCode">
+                </td>
+                </tr>
+                <tr>
+                <th>パスワード(Password)</th>
+                <td>
+                    <input type="password" class="password-login" name="Password" id="password">
+                </td>
+                </tr>
+            </table>
+            <button onclick="challangeLoginAccess()">認証</button>
+        </div>
+        <div class="outputBox">
+            <table>
+                <tr>
+                    <th>認証状況</th>
+                    <td class="showText3">組織にログインしていません</td>
+                </tr>
+                <tr>
+                    <th>ニックネーム</th>
+                    <td class="showText4">?</td>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="loginbox">
+            <table>
+                <tr>
+                    <th>ログイン内容を保存する</th>
+                    <td>
+                        <input id="keep" type="checkbox"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="loginButton">
+            <button onclick="login()">ログイン</button>
+        </div>
+    </section>
+   </main>
+   
+   <footer>&copy; 2024 Liblend/LCMD All Rights Reserved.</footer>
+</body>
+  
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+
+<html>
+    
+<head>
+    <meta charset="utf-8" />
+    <title>統一図書貸出管理システム「Liblend」</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common\common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/common/img/apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/common/img/android-chrome-192x192.png" sizes="192x192">
+</head>
+
+<body>
+    <header>
+        <h1 onclick="location.href='/'">Liblend</h1>
+        <nav class="nav">
+            <ul class="header-menu">
+                <li><button onclick="window.open('/liblend_app/login/')">&#x1f464;ログイン</button></li>
+                <li><button onclick="window.open('https://sites.google.com/view/liblend-lcmdservice/')">&#x26a0;稼働状況</button></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#account">Account</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+        <div class="header">
+        <h2>統一図書貸出管理システム</h2>
+        <h1>Liblend</h1>
+        </div>
+
+    <main>
+        <div class="about">
+            <h2 id="about">Liblendについて</h2>
+            <div class="abox">
+                <div class="atxt">
+                    <h3 class="attl">より身軽に、より多様な選択肢を</h3>
+                    <div class="ahbn">
+                        <p>Liblendは、手間を省き、最大限のカスタマイズ性を持たせ、図書の貸借を簡単にします</p>
+                    </div>
+                </div>
+                <figure class="aphoto"><span><img src="top_img/choose.png" alt=""></span></figure>
+            </div>
+            <div class="abox">
+                <div class="atxt">
+                    <h3 class="attl">大切な個人情報は頂きません</h3>
+                    <div class="ahbn">
+                        <p>Liblendが頂くのはあなた方の最小限の情報だ。<br>個人情報はあなた方が保持<br>個人情報をLiblendが頂くことはありません</p>
+                    </div>
+                </div>
+                <figure class="aphoto"><span><img src="top_img/danger.png" alt=""></span></figure>
+            </div>
+            <div class="abox">
+                <div class="atxt">
+                    <h3 class="attl">本の情報の登録は必要ありません</h3>
+                    <div class="ahbn">
+                        <p>Liblendは、本の情報をもともと本に印字されているバーコードから取得<br>同じ本があっても枝番をつけるだけで区別できます</p>
+                    </div>
+                </div>
+                <figure class="aphoto"><span><img src="top_img/cloud.jpg" alt=""></span></figure>
+            </div>
+            <div class="abox">
+                <div class="atxt">
+                    <h3 class="attl">最大限のカスタマイズ性</h3>
+                    <div class="ahbn">
+                        <p>システムをあなた方が保持することで、データとシステムをカスタマイズ<br>さらに、プログラミングの知識があればシステム自体をカスタマイズすることもできます</p>
+                        <p class="kakusimesse-zi">そんな知識があれば一から作るだろうけどね</p>
+                    </div>
+                </div>
+                <figure class="aphoto"><span><img src="top_img/customize.png" alt=""></span></figure>
+            </div>
+        </div>
+        <div class="account">
+            <h2 id="account">Liblendに登録</h2>
+            <div id="kiyaku" class="kiyakubox">
+                <p>利用規約
+                <br>
+                <br>一.サービスの利用
+                <br>Liblend(以下、サービスと呼ぶ)を利用するには、本規約への同意が必要である。
+                <br>　2.登録組織(以下、組織と呼ぶ)は、組織の管轄する利用者(以下、利用者と呼ぶ)に本規約を周知し、同意した利用者のみにサービスを使用させることができる。
+                <br>
+                <br>二.利用規約の変更
+                <br>　サービスの提供者(以下、提供者と呼ぶ)は、この規約を変更することができる。ただし、変更する際には一週間前までにサービスのホームページにて告知する必要がある。ただし、緊急に変更する必要があると提供者が判断する場合はその限りではない。
+                <br>
+                <br>三.サービスの定義
+                <br>　本サービスは、蔵書管理システムのウェブサイトおよび組織のシステムに接続するシステムを提供するものである。
+                <br>
+                <br>四.情報の取得・提供
+                <br>　提供者は、サービスを提供するための最小限の情報として、組織から以下の情報を取得する。
+                <br>　i .組織名
+                <br>　ii.組織のシステムに接続するためのURL
+                <br>　2.提供者は、利用状況を調査するため、Google Books API利用組織を対象に、利用組織及び書籍を特定しない形で以下の情報を取得する。
+                <br>　　i  .エラー数
+                <br>　　ii .トラフィック
+                <br>　　iii.レイテンシ
+                <br>　2-2.提供者は、独自にGoogle APIキーを発行・設定している組織の情報はGoogle Books APIを使用していても取得しない。
+                <br>　3.提供者は、サービスを提供するために組織に以下の情報を提供する
+                <br>　　i  .サービスにアクセスするための組織コード
+                <br>　　ii .初期設定用の利用者アカウント
+                <br>　　iii.組織のシステムに利用者を追加するためのURL
+                <br>　　iv .組織のシステムのサンプル
+                <br>　　iv-2.組織のシステムのサンプルは、以下で構成される
+                <br>　　     i .Google SpreadSheet「Liblend_adminSheet」及びそれに付随するGoogle Apps Script
+                <br>　　     ii.Google SpreadSheet「Liblend_userSheet」及びそれに付随するGoogle Apps Script
+                <br>　4.提供者は、サービスの提供以外の目的で組織の情報を取得するために組織から取得した情報を使用しない。ただし、緊急の必要性があると提供者が判断する場合はその限りではない。
+                <br>　5.組織及び利用者は、サービスに接続する以外の目的で提供者から提供された情報を使用してはならない。
+                <br>
+                <br>四.システムの構築に関する規則
+                <br>　組織は、提供者から提供された「組織のシステムのサンプル」を基に組織のシステムを構築する。ただし、組織に応じてシステムを最適化するために組織の独自のシステムを構築してもよい。
+                <br>　2.組織は、サービスのシステムに攻撃するようなシステムを絶対に構築してはならない。
+                <br>
+                <br>五.禁止事項
+                <br>　組織及び利用者は、他者の著作権や知的財産権を侵害してはならない。
+                <br>　2.組織及び利用者は、多重アクセス等、サービスのシステムを攻撃するような行為をしてはならない。
+                <br>
+                <br>六.利用規約の違反
+                <br>　組織が本規約に違反した場合、提供者は予告なく当該組織のサービスのアクセスを禁止することができる。
+                <br>　2.利用者が本規約に違反した場合、提供者は予告なく当該利用者及び当該組織のアクセスを禁止することができる。
+                <br>
+                <br>七.損害賠償
+                <br>　組織及び利用者の行動によってサービス及び提供者に損害が生じた場合、提供者は当該組織及び当該利用者に損害賠償を請求することができる。
+                <br>
+                <br>八.免責
+                <br>　本サービスの利用によって組織及び利用者に損害が生じた場合、提供者は賠償責任を負わない。
+                <br>
+                <br>九.サービスの提供の中止、変更、終了
+                <br>　提供者は、予告なくサービスを中止、変更、終了することができる。
+                <br>　2.サービスの提供の中止、変更、終了によって組織及び利用者に損害が生じた場合、提供者は賠償責任を負わない。</p>
+                <a href="/liblend_account/orgAccount/">同意して登録する</a>
+            </div>
+        </div>
+        <div>
+            <h2 id="contact">お問い合わせ</h2>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScdJhqwETqpAea8RhMwAMB0K7lNDZhJSpGPz1owrBNjb7UArQ/viewform?embedded=true" width="640" height="586" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+        </div>
+    </main>
+
+    <footer>&copy; 2024 Liblend/LCMD All Rights Reserved.</footer>
+</body>
+
+</html>

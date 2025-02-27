@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+
+<html>
+    
+<head>
+    <meta charset="utf-8" />
+    <title>本の詳細|統一図書貸借貸出管理システム「Liblend」</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="/common/common.js"></script>
+    <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/common/img/apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/common/img/android-chrome-192x192.png" sizes="192x192">
+</head>
+
+<body onload="preLoad()">
+    <header>
+        <h1 onclick=location.href="/">Liblend</h1>
+        <nav class="nav">
+            <ul class="header-menu">
+                <li><button onclick="openCalil()">カーリル</li>
+                <li><button onclick="openNDL()">NDLサーチ</button></li>
+                <li><button onclick="openBooks()">Books</button></li>
+                <li><button onclick="openGoogle()">Google Books</button></li>
+                <li>|</li>
+                <li><button onclick="window.open('/liblend_app/info/')">&#x2139;ヘルプ</button></li>
+                <li><button onclick="window.open('https://sites.google.com/view/liblend-lcmdservice/')">&#x26a0;稼働状況</a></li>
+            </ul>
+        </nav> 
+    </header>
+    
+    <main>
+        <div class="title">
+            <h4 id="yomigana"></h4>
+            <h2 id="large-title"></h2>
+            <h3 id="large-authors"></h3>
+        </div>
+        <div class="description">
+            <img id="thumbnail" onerror="this.style.display='none'"/>
+            <table>
+                <tr>
+                    <th>書名</th>
+                    <td id="title"></td>
+                </tr>
+                <tr>
+                    <th>著者</th>
+                    <td id="authors"></td>
+                </tr>
+                <tr>
+                    <th>ISBN13</th>
+                    <td id="ISBN13"></td>
+                </tr>
+                <tr>
+                    <th>ISBN10</th>
+                    <td>組織の設定しているAPIでは取得することができません</td>
+                </tr>
+                <tr>
+                    <th>NDC(日本十進分類法)</th>
+                    <td id="ndc10"></td>
+                </tr>
+                <tr>
+                    <th>出版社</th>
+                    <td id="publisher"></td>
+                </tr>
+                <tr>
+                    <th>発売日</th>
+                    <td id="publishedDate"></td>
+                </tr>
+                <tr>
+                    <th>大きさ</th>
+                    <td>組織の設定しているAPIでは取得することができません</td>
+                </tr>
+                <tr>
+                    <th>ページ数</th>
+                    <td id="pageCount"></td>
+                </tr>
+                <tr>
+                    <th>定価</th>
+                    <td id="price"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="description">
+        </div>
+    </main>
+    
+    <footer>このページの情報は、国立国会図書館サーチのAPIから取得した以下のデータに由来します。
+    <br><a href="https://ndlsearch.ndl.go.jp/">国立国会図書館蔵書｜国立国会図書館新着書誌情報｜国立国会図書館雑誌記事索引｜国立国会図書館雑誌記事索引オンライン資料編｜国立国会図書館デジタルコレクション（オープンデータ）＜国立国会図書館が運営＞</a>
+    <br><a href="https://www.books.or.jp/">出版情報登録センター（JPRO）<出版情報登録センターが運営></a>
+    <br>ライセンスは<a href="https://creativecommons.org/licenses/by/4.0/legalcode.ja">クリエイティブ・コモンズ 表示 4.0 国際 パブリック・ライセンス</a>です。
+    <br>このページの情報はNDLサーチAPIにより取得しています。このページに表示される情報について、Liblendは責任を負いません。</footer>
+    <footer>&copy; 2024 Liblend/LCMD All Rights Reserved.</footer>
+</body>

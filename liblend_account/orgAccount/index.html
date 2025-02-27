@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>組織アカウント作成|統一図書貸出管理システム「Liblend」</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/common/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="/common/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/common/img/apple-touch-icon-180x180.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/common/img/android-chrome-192x192.png"
+      sizes="192x192"
+    />
+  </head>
+
+  <body onload="preload()">
+    <header>
+      <h1 onclick="location.href='/'">Liblend</h1>
+      <nav class="nav">
+        <ul class="header-menu">
+          <li><p>組織アカウント作成</p></li>
+        </ul>
+      </nav>
+      <nav class="nav">
+        <ul class="header-menu">
+          <li>
+            <button
+              onclick="window.open('https://sites.google.com/view/liblend-lcmdservice/')"
+            >
+              &#x26a0;稼働状況
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hidden" id="1">
+        <h2>環境確認</h2>
+        <p>
+          アカウントを作成するには、少なくとも5MBのストレージ容量が必要です(ユーザ数によって増減します。それでも1GBほどの容量を確保すれば動くと思います。)
+        </p>
+        <button onclick="end1()">読み終わりました</button>
+      </div>
+      <div class="hidden" id="2">
+        <h2>準備</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/5Lz9KPKxv9Q?si=xXrgvTAoxiMznSBc"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <p>
+          動画は開発中のものです。最新版と一部異なる部分がある場合があります。
+        </p>
+        <p>
+          <a href="https://drive.google.com/drive/u/0/my-drive" target="_blank"
+            >Google Drive</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://drive.google.com/drive/folders/1FwJQ8M6LW34mBal4Xae3_2CR3RgidR0q?usp=sharing"
+            target="_blank"
+            >ファイルのリンク</a
+          >
+        </p>
+        <button onclick="end2()">設定が終わりました</button>
+      </div>
+      <div class="hidden" id="3">
+        <h2>APIの設定</h2>
+        <p>
+          本の情報を取得するAPIを選択します
+          <br />最初にコピーしたスプレッドシートを開いてください(初期の名前は"Liblend_adminSheet")
+          <br />
+          <br />現在、APIは2種類から選べます
+        </p>
+        <h3>Google Books API</h3>
+        <p>
+          Googleが提供するAPIです
+          <br />
+          <br />メリット <br />世界中の有名な本がまんべんなく登録されている
+          <br />
+          <br />デメリット
+          <br />出版社や書籍の知名度によっては登録されていないものも多い
+          <br />商用利用はできない
+          <br />システム全体で一日当たり1000件までしか接続を試行できない
+          <br />（別途、組織のほうでGoogle
+          APIキーを設定していただければ組織で一日当たり1000件に増やすことが可能です）
+        </p>
+        <h3>NDLサーチAPI</h3>
+        <p>
+          国立国会図書館が提供するAPIです
+          <br />
+          <br />メリット <br />日本中の本がほぼすべて登録されている
+          <br />
+          <br />デメリット <br />外国の本はほとんど登録されていない
+          <br />商用利用及び継続的にアクセスする場合は<a
+            href="https://form.ndl.go.jp/form/pub/ndl1/api"
+            target="_blank"
+            >利用申請フォーム</a
+          >から申請が必要
+        </p>
+        <img src="img/screen1.png" />
+        <p>
+          Google Books
+          APIを使う場合は'google'、NDLサーチAPIを使用する場合は'ndl'と"defaultAPIEngine"の下に書いてください
+          <br />注）Google Books APIを使用する場合、"googleAPIKey"の下にGoogle
+          APIキーを入力することでそれを適用することができます
+          <br />APIキーについての詳しい情報は<a
+            href="https://cloud.google.com/docs/authentication/api-keys"
+            target="_blank"
+            >Googleのドキュメント</a
+          >を確認してください
+        </p>
+        <button onclick="end3()">設定した</button>
+      </div>
+      <div class="hidden" id="4">
+        <h2>その他のこと</h2>
+        <h3>貸出上限冊数</h3>
+        <p>
+          デフォルトでは20冊です。
+          <br />変更をしたい場合は、2番目にコピーしたスプレッドシート(初期の名前は「Liblend_userSheet」)の「sanple_lending」の行数を増減させ、「num」列に数字を追加してください。
+          <br />この操作は利用者を追加したのちに行うことは基本出来ません。
+          <br />スプレッドシートの制約上、貸出上限冊数に応じて組織に追加できる上限人数が異なります。
+        </p>
+        <p>参考：貸出上限冊数と上限人数の関係表</p>
+        <table>
+          <tr>
+            <th>貸出上限冊数</th>
+            <th>上限人数</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>96152</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>76922</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>64101</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>29585</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>21367</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>16722</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>11654</td>
+          </tr>
+          <tr>
+            <td>50</td>
+            <td>7256</td>
+          </tr>
+        </table>
+        <p>
+          (これらの値は理論値です。限界近くまで追加をすると動作が重くなったり不具合の原因となる可能性があります。)
+        </p>
+        <button onclick="end4()">理解した</button>
+      </div>
+      <div class="hidden" id="5">
+        <h2>組織アカウント作成</h2>
+        <p>
+          'AdminSheetAppURL'には、最初に開いたスプレッドシートに紐づけられていたApps
+          Scriptの画面に表示されているURL、
+          <br />'UserSheetAppURL'には、次に開いたスプレッドシートに紐づけられていたApps
+          Scriptの画面に表示されているURLを入力してください
+          <br />コピーボタンを押すことで簡単にコピーできます
+        </p>
+        <img src="img/screen2.png" />
+        <table class="noborder">
+          <tr>
+            <th>組織名</th>
+            <td>
+              <input type="text" id="orgName" />
+            </td>
+          </tr>
+          <tr>
+            <th>AdminSheetAppURL</th>
+            <td>
+              <input type="text" id="adminSheetAppURL" />
+            </td>
+          </tr>
+          <tr>
+            <th>UserSheetAppURL</th>
+            <td>
+              <input type="text" id="userSheetAppURL" />
+            </td>
+          </tr>
+        </table>
+        <button onclick="send()">登録</button>
+      </div>
+      <div class="hidden" id="6">
+        <h2>作成完了</h2>
+        <p>
+          アカウントの作成が完了しました
+          <br />あなたの組織の組織コード（ログインの際に必要です。必ずメモしてください。）
+        </p>
+        <p id="orgCode">確認中です...</p>
+        <p>
+          管理者権限を持つ利用者アカウントを自動的に作成しました。
+          <br />
+          <br />利用者番号:100000000 <br />パスワード:applepasta
+          <br />
+          <br />初期設定を終了したら、このアカウントのパスワードを変更することをお勧めします。
+        </p>
+        <button onclick="window.location.href = '/liblend_app/login/'">
+          ログイン画面へ
+        </button>
+      </div>
+    </main>
+
+    <footer>&copy; 2024 Liblend/LCMD All Rights Reserved.</footer>
+  </body>
+
+  <script src="script.js"></script>
+</html>

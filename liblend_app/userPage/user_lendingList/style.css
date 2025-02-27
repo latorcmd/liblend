@@ -1,0 +1,36 @@
+/* ---------------mainセクション-------------- */
+main {
+  margin-bottom: 10px;
+}
+
+.main h2{
+  font-size: 30px;
+  border-left-style: solid;
+  border-left-width: 10px;
+  padding-left: 15px;
+  margin-bottom: 50px;
+  border-left-color: var(--secondary-color);
+  margin-left: 30px;
+}
+
+.main table {
+  background-color: var(--background-color);
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+}
+
+.main table th {
+  border-bottom: 1px solid #000000;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: var(--text-color-onfill);
+  text-align: center;
+}
+
+.main table td {
+  border-bottom: 1px solid #000000;
+  padding: 10px;
+  text-align: center;
+  color: var(--text-color-placeholder);
+}

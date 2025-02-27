@@ -1,0 +1,67 @@
+/* ---------------mainセクション-------------- */
+main {
+  margin-bottom: 10px;
+}
+
+main h2{
+  font-size: 30px;
+  border-left-style: solid;
+  border-left-width: 10px;
+  padding-left: 15px;
+  margin-bottom: 50px;
+  border-left-color: var(--secondary-color);
+  margin-left: 30px;
+  color: var(--text-color-body);
+}
+
+
+.input table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input table th {
+  padding: 10px;
+  color: var(--text-color-body);
+}
+
+.input table td {
+  padding: 3px 10px;
+  color: var(--text-color-discription);
+}
+
+button {
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+#lendingList table {
+  background-color: var(--background-color);
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+}
+
+#lendingList table th {
+  border-bottom: 1px solid #000000;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: var(--text-color-onfill);
+  text-align: center;
+}
+
+#lendingList table td {
+  border-bottom: 1px solid #000000;
+  padding: 10px;
+  text-align: center;
+  color: var(--text-color-placeholder);
+}
+label {
+  margin-left: 30px;
+}
+
+
+.hidden {
+  display: none;
+}

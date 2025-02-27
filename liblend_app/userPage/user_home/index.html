@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+<html>
+    
+<head>
+    <meta charset="utf-8" />
+    <title>ホーム|統一図書貸出管理システム「Liblend」</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/common/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/common/common.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+    <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/common/img/apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/common/img/android-chrome-192x192.png" sizes="192x192">
+</head>
+
+<body onload=preLoad()>
+    <header class="header">
+        <h1 onclick="pageTransitionSendVariable_checkUserContent('/liblend_app/userPage/user_home/')">Liblend</h1>
+        <nav class="nav">
+            <ul class="header-menu">
+                <li><p class="showOrgCode">組織コード:00000</p></li>
+                <li><p class="showOrgName">組織名:麺類</p></li>
+                <li><p class="showUserCode">利用者番号:999999999</p></li>
+                <li><p class="showUserName">Jane Doeさん</p></li>
+            </ul>
+        </nav>
+        <nav class="nav">
+            <ul class="header-menu">
+                <li><button onclick="window.open('/liblend_app/info/')">&#x2139;ヘルプ</button></li>
+                <li><button onclick="logout()">&#x1f464;ログアウト</a></li>
+                <li><button onclick="window.open('https://sites.google.com/view/liblend-lcmdservice/')">&#x26a0;稼働状況</a></li>
+            </ul>
+        </nav>
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="nav">
+         
+          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+          <input id="drawer_input" class="drawer_hidden" type="checkbox">
+         
+          <!-- ハンバーガーアイコン -->
+          <label for="drawer_input" class="drawer_open"><span></span></label>
+          
+          <!-- メニュー -->
+          <nav class="nav_content">
+            <ul class="nav_list">
+              <li class="nav_item"><a onclick="pageTransitionSendVariable_checkUserContent('/liblend_app/userPage/user_home/')">ホーム</a></li>
+              <li class="nav_item"><a onclick="pageTransitionSendVariable_checkUserContent('/liblend_app/userPage/user_lendingList/')">借りた本</a></li>
+              <li class="nav_item"><a onclick="pageTransitionSendVariable_checkLibrarianContent('/liblend_app/librarianPage/librarian_proxyLendingList/')">司書代理ログイン</a></li>
+              <li class="nav_item"><a onclick="pageTransitionSendVariable_checkAdminContent('/liblend_app/adminPage/admin_proxyRole/')">管理者代理ログイン</a></li>
+              <li class="nav_item"><a onclick="pageTransitionSendVariable_checkAdminContent('/liblend_app/adminPage/admin_addUser/')">利用者追加</a></li>
+              <li class="nav_item"><a onclick="pageTransitionSendVariable_checkAdminContent('/liblend_app/adminPage/admin_resetPassword/')">パスワードをリセット</a></li>
+            </ul>
+          </nav>
+      </div>
+    </header>
+   
+    <main>
+        <section class="sectionBarcode">
+        <div class="barcode">
+            <p>利用者バーコード</p>
+            <img title="借りたり返したりするときに出すバーコードです" id="barcode_userCode"/>
+            <p>組織バーコード</p>
+            <img title="あまり使いません" id="barcode_orgCode"/>
+        </div>
+        </section>
+        <section class="sectionMain">
+        <div class="main">
+            <h2>あなたの情報</h2>
+            <table>
+                <tr>
+                    <th colspan="2">利用者情報</th>
+                </tr>
+                <tr>
+                    <th>組織番号</th>
+                    <td class="showOrgCodeNormal"></td>
+                </tr>
+                <tr>
+                    <th>組織名</th>
+                    <td class="showOrgNameNormal"></td>
+                </tr>
+                <tr>
+                    <th>利用者番号</th>
+                    <td class="showUserCodeNormal"></td>
+                </tr>
+                <tr>
+                    <th>ニックネーム</th>
+                    <td class="showUserNameNormal"></td>
+                </tr>
+                <tr>
+                    <th colspan="2">権限</th>
+                </tr>
+                <tr>
+                    <th title="本を借りたり返したりできます">利用者</th>
+                    <td class="showRoleUserNormal"></td>
+                </tr>
+                <tr>
+                    <th title="本の貸借管理ができます">司書</th>
+                    <td class="showRoleLibrarianNormal"></td>
+                </tr>
+                <tr>
+                    <th title="組織の管理ができます">管理者</th>
+                    <td class="showRoleAdminNormal"></td>
+                </tr>
+            </table>
+        </div>
+        </section>
+    </main>
+    
+    <footer>&copy; 2024 Liblend/LCMD All Rights Reserved.</footer>

@@ -1,5 +1,5 @@
 let commontest = "ie-i!";
-let version = "v1.0.1";
+let version = "v1.0.2";
 
 //変数たち
 //遷移先ページのURL

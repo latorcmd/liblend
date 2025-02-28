@@ -31,7 +31,7 @@ Google Drive で配布フォルダを作成します。<br>
 アップロードしたファイルを開き、拡張機能＞ Apps Script を押します。<br>
 コード.gs に[liblend/database/client/userSheet/Code.gs](https://github.com/latorcmd/liblend/blob/main/database/client/userSheet/Code.gs)のコードをコピーアンドペーストし、保存します。<br>
 作成したフォルダに共有設定（リンクを知っている全員に閲覧者権限を与える程度がちょうどいいと思います）をし、リンクをコピーします。<br>
-[liblend/liblend_account/orgAccount/index.html](https://github.com/latorcmd/liblend/blob/main/liblend_account/orgAccount/index.html):87 の"DistributeFolder"にコピーしたリンクをペーストします。
+[liblend/liblend_account/orgAccount/index.html](https://github.com/latorcmd/liblend/blob/main/liblend_account/orgAccount/index.html):103 の"DistributeFolder"にコピーしたリンクをペーストします。
 
 ### Google Books API の設定
 

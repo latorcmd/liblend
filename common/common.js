@@ -1,4 +1,5 @@
 let commontest = "ie-i!";
+let version = "v1.0.1";
 
 //変数たち
 //遷移先ページのURL
@@ -27,65 +28,64 @@ let roleAdmin = sessionStorage.getItem("roleAdmin");
 
 //遷移先ページにデータを送る
 function pageTransitionSendVariable(link) {
-    window.location.href = link;
+  window.location.href = link;
 }
 
 //遷移先ページにデータを送る+権限チェック(User)
 function pageTransitionSendVariable_checkUserContent(link) {
-    if (roleUser == "true") {
-        pageTransitionSendVariable(link);
-    } else {
-        alert("あなたにはこのページに接続する権限がありません");
-    }
+  if (roleUser == "true") {
+    pageTransitionSendVariable(link);
+  } else {
+    alert("あなたにはこのページに接続する権限がありません");
+  }
 }
 
 //遷移先ページにデータを送る+権限チェック(Librarian)
 function pageTransitionSendVariable_checkLibrarianContent(link) {
-    if (roleLibrarian == "true") {
-        pageTransitionSendVariable(link);
-    } else {
-        alert("あなたにはこのページに接続する権限がありません");
-    }
+  if (roleLibrarian == "true") {
+    pageTransitionSendVariable(link);
+  } else {
+    alert("あなたにはこのページに接続する権限がありません");
+  }
 }
 
 //遷移先ページにデータを送る+権限チェック(Admin)
 function pageTransitionSendVariable_checkAdminContent(link) {
-    if (roleAdmin == "true") {
-        pageTransitionSendVariable(link);
-    } else {
-        alert("あなたにはこのページに接続する権限がありません");
-    }
+  if (roleAdmin == "true") {
+    pageTransitionSendVariable(link);
+  } else {
+    alert("あなたにはこのページに接続する権限がありません");
+  }
 }
 
 //本の詳細ページ
 function openBookDescriptionPage(isbn) {
-    if (defaultAPIEngine == "google") {
-        if (googleAPIKey == "undefined") {
-            transitionPageURL =
-                "/liblend_app/bookDescription/google/?isbn=" + isbn;
-        } else {
-            transitionPageURL =
-                "/liblend_app/bookDescription/google/?isbn=" +
-                isbn +
-                "&googleAPIKey=" +
-                googleAPIKey;
-        }
-    } else if (defaultAPIEngine == "ndl") {
-        transitionPageURL = "/liblend_app/bookDescription/ndl/?isbn=" + isbn;
+  if (defaultAPIEngine == "google") {
+    if (googleAPIKey == "undefined") {
+      transitionPageURL = "/liblend_app/bookDescription/google/?isbn=" + isbn;
     } else {
-        alert("このページを開くことが出来ません");
+      transitionPageURL =
+        "/liblend_app/bookDescription/google/?isbn=" +
+        isbn +
+        "&googleAPIKey=" +
+        googleAPIKey;
     }
-    window.open(transitionPageURL, "subwin");
+  } else if (defaultAPIEngine == "ndl") {
+    transitionPageURL = "/liblend_app/bookDescription/ndl/?isbn=" + isbn;
+  } else {
+    alert("このページを開くことが出来ません");
+  }
+  window.open(transitionPageURL, "subwin");
 }
 
 function commonPreLoad() {
-    $(".showOrgCode").text("組織コード:" + orgCode);
-    $(".showOrgName").text("組織名:" + orgName);
-    $(".showUserCode").text("利用者番号:" + userCode);
-    $(".showUserName").text(userName + "さん");
+  $(".showOrgCode").text("組織コード:" + orgCode);
+  $(".showOrgName").text("組織名:" + orgName);
+  $(".showUserCode").text("利用者番号:" + userCode);
+  $(".showUserName").text(userName + "さん");
 }
 
 function logout() {
-    sessionStorage.clear();
-    window.location.href = "/liblend_app/login/";
+  sessionStorage.clear();
+  window.location.href = "/liblend_app/login/";
 }

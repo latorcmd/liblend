@@ -56,6 +56,8 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
+    <script src="common\common.js"></script>
     <link
       rel="shortcut icon"
       href="/common/img/favicon.ico"
@@ -74,7 +76,7 @@
     />
   </head>
 
-  <body>
+  <body onload="loadVersion()">
     <header>
       <h1 onclick="location.href='/'">Liblend</h1>
       <nav class="nav">
@@ -93,7 +95,9 @@
           </li>
           <li><a href="#about">About</a></li>
           <li><a href="#account">Account</a></li>
+          <li><a href="#develop">Develop</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a class="version">バージョン読み込み中</a></li>
         </ul>
       </nav>
     </header>
@@ -225,6 +229,20 @@
         </div>
       </div>
       <div>
+        <h2 id="develop">開発者向け情報</h2>
+        <p>
+          LiblendはGitHubからソースコードを入手できます。<br />
+          <a href="https://github.com/latorcmd/liblend" target="_blank"
+            ><img src="top_img\github-mark.svg" /></a
+          ><br />
+          Gitを用いて以下のコマンドで入手できます。<br />
+          <code>git clone https://github.com/latorcmd/liblend.git</code><br />
+          <br />
+          バグは、GitHubのIssueで報告してください。<br />
+          現在、機能リクエストは受け付けていません。<br />
+        </p>
+      </div>
+      <div>
         <h2 id="contact">お問い合わせ</h2>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLScdJhqwETqpAea8RhMwAMB0K7lNDZhJSpGPz1owrBNjb7UArQ/viewform?embedded=true"
@@ -238,6 +256,11 @@
       </div>
     </main>
 
-    <footer>&copy; 2024 Liblend/LCMD All Rights Reserved.</footer>
+    <footer
+      onclick="location.href='https://github.com/latorcmd'"
+      target="_blank"
+    >
+      &copy; 2024 Liblend/LCMD All Rights Reserved.
+    </footer>
   </body>
 </html>

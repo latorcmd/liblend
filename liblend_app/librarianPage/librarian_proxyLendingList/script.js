@@ -8,6 +8,7 @@ let length;
 /* preLoad */
 
 function preLoad() {
+  loadVersion();
   rolecheck();
   commonPreLoad();
   var weekDayList = ["日", "月", "火", "水", "木", "金", "土"];

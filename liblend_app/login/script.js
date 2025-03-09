@@ -30,6 +30,7 @@ let loginChallangeURL;
 let transitionPageURL;
 
 function preload() {
+  loadVersion();
   sessionStorage.clear();
   getlocal();
 }

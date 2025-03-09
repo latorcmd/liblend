@@ -1,5 +1,5 @@
 let commontest = "ie-i!";
-let version = "v1.0.2";
+let version = "v1.0.3";
 
 //変数たち
 //遷移先ページのURL
@@ -83,6 +83,14 @@ function commonPreLoad() {
   $(".showOrgName").text("組織名:" + orgName);
   $(".showUserCode").text("利用者番号:" + userCode);
   $(".showUserName").text(userName + "さん");
+}
+
+function loadVersion() {
+  $(".version").text(version);
+  $(".version").attr(
+    "href",
+    "https://github.com/latorcmd/liblend/releases/tag/" + version
+  );
 }
 
 function logout() {

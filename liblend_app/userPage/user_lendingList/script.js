@@ -6,6 +6,7 @@ let test = "pi-su";
 /* preLoad */
 
 function preLoad() {
+  loadVersion();
   rolecheck();
   commonPreLoad();
   sendGetLendingRequest(onRequestLending);

@@ -11,13 +11,14 @@ Liblend を利用する前に、以下のことを行ってください。
 Google Apps Script でデータベースを作成します<br>
 
 [Google Drive](https://drive.google.com/)を開き、[database/admin/orgCodeSheet/LibrendAdmin_orgcodesheet.xlsx](https://github.com/latorcmd/liblend/blob/main/database/admin/orgCodeSheet/LibrendAdmin_orgcodesheet.xlsx)をアップロードします。<br>
+(Google Drive の設定で「アップロードしたファイルを Google ドキュメントエディタ形式に変換」にチェックが入っていることを確かめてください)
 アップロードしたファイルを開き、URL の'/d/'と'/edit'の間の文字の羅列（スプレッドシート ID）をコピーします。
 拡張機能＞ Apps Script を押します。<br>
 コード.gs に[database/admin/orgCodeSheet/Code.gs](https://github.com/latorcmd/liblend/blob/main/database/admin/orgCodeSheet/Code.gs)のコードをコピーアンドペーストします。<br>
 4 行目の"Enter Spreadsheet ID"にコピーしたスプレッドシート ID をペーストします。<br>
 デプロイ＞新しいデプロイを押し、表示された画面で歯車マーク＞ウェブアプリを押して、「次のユーザーとして実行」を「自分」、「アクセスできるユーザー」を「全員」にしてデプロイを押します。<br>
 自分のアカウントにログインし、プログラムに権限を与えます。<br>
-その後、表示された「デプロイ URL」をコピーし、[liblend_app/login/script.js](https://github.com/latorcmd/liblend/blob/main/liblend_app/login/script.js):41 の"Login Database URL"にペーストします。<br>
+その後、表示された「デプロイ URL」をコピーし、[liblend_app/login/script.js](https://github.com/latorcmd/liblend/blob/main/liblend_app/login/script.js):42 の"Login Database URL"にペーストします。<br>
 
 ### 配布フォルダの作成
 
@@ -40,7 +41,7 @@ Liblend は本の検索のために Google Books API を使用しているため
 > 営利目的の使用の場合、利用規約に違反する場合があります。その場合はこの項目を飛ばしていただいて構いません。詳しくは[Google の利用規約](https://developers.google.com/books/terms?hl=ja)をご覧ください。
 
 Google API キー を作成してください（[こちらのページ](https://qiita.com/ryamate/items/2a0cba391829e20009aa)を参考にするとわかりやすいと思います）。<br>
-[liblend_app/login/script.js](https://github.com/latorcmd/liblend/blob/main/liblend_app/login/script.js):135 の"Google API Key"を先ほど作成した Google API キー に書き換えてください。<br>
+[liblend_app/login/script.js](https://github.com/latorcmd/liblend/blob/main/liblend_app/login/script.js):136 の"Google API Key"を先ほど作成した Google API キー に書き換えてください。<br>
 
 ### (任意)NDL サーチ API の利用申請
 
@@ -65,3 +66,7 @@ Liblend は本の検索のために NDL サーチ API を使用しているた�
 ### ファイルの整理
 
 設定を終えた後は、[.github/ISSUE_TEMPLATE](https://github.com/latorcmd/liblend/tree/main/.github/ISSUE_TEMPLATE)と[database](https://github.com/latorcmd/liblend/tree/main/database)は削除していただいて構いません。
+
+## 雑文(文体が変わったり読みにくかったりするかもしれませんがあしからず。)
+
+デフォルトだと稼働状況のリンク(index.html:104 とかほぼ全部のページにある)とか GitHub のリンク(index.html の開発者向け情報とかフッターとかバージョン表示とか)とかがこちら側のサイトだったり index.html の紹介文が怪しい外国サイトぽい雰囲気になっていたりする(国語力が足りなかったのだよ)ので必要に応じて変えておいてください。

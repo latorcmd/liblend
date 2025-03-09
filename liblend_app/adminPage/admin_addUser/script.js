@@ -7,6 +7,7 @@ let list;
 /* preLoad */
 
 function preLoad() {
+  loadVersion();
   rolecheck();
   commonPreLoad();
   $("#link").attr(

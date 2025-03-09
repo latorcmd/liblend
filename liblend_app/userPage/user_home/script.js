@@ -1,4 +1,4 @@
-s; //変数たち
+//変数たち
 let test = "pi-su";
 
 /* ---------------区切り--------------- */
@@ -6,9 +6,11 @@ let test = "pi-su";
 /* preLoad */
 
 function preLoad() {
+  loadVersion();
   loadBarcode();
   rolecheck();
   commonPreLoad();
+
   $(".showOrgCodeNormal").text(orgCode);
   $(".showOrgNameNormal").text(decodeURIComponent(orgName));
   $(".showUserCodeNormal").text(userCode);
